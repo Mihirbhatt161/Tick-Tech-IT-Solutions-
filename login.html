@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login page</title>
+  </head>
+     
+    <style>
+      
+      body {
+        height: 100%;
+      }
+      
+      body {
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color:  orange;
+      }
+      
+      .form-signin {
+        max-width: 330px;
+        padding: 30px;
+      }
+      
+      .form-signin .form-floating:focus-within {
+        z-index: 2;
+      }
+      
+      .form-signin input[type="email"] {
+        margin-bottom: 5px;
+        border-bottom-right-radius: 10;
+        border-bottom-left-radius: 10;
+      }
+      
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 10;
+        border-top-right-radius: 10;
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+    </style>
+
+    
+    
+    
+  </head>
+  <body class="text-center">
+    
+
+  <form class="form-signin" method="post" action="/login">
+    {% csrf_token %}
+    
+    <h1 class="h3 mb-3 fw-normal">Please login</h1>
+
+    <div class="form-floating">
+      <input type="text" name ="username" class="form-control" id="floatingInput" placeholder="username">
+      <label for="floatingInput">username</label>
+    </div>
+  </br>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+  </br>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">login</button>
+    
+  </form>
+</main>
+
+
+    
+  </body>
+</html>
